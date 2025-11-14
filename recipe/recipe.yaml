@@ -1,5 +1,5 @@
 context:
-  version: "0.0.38"
+  version: "0.0.39"
 
 package:
   name: genai-prices
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/g/genai-prices/genai_prices-${{ version }}.tar.gz
-    sha256: 27295d0db523cc5e98aea656a297b78c768cceeab03608a0dd5b029e095229ca
+    sha256: 0f602f91699e78143e597360d2e8ac43a330a5398454e016568de95eec0323fa
   - url: https://raw.githubusercontent.com/pydantic/genai-prices/v${{ version }}/LICENSE
     sha256: ab47bf0bbd619cd73e16fd7873c7e0798e7aa62bcc9ae2fc79cbcb9799e609f6
 
