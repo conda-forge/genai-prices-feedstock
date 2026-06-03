@@ -28,6 +28,7 @@ requirements:
     - python >=${{ python_min }}
     - eval-type-backport >=0.2
     - httpx >=0.28.1
+    - httpx2 >=2.0
     - pydantic >=2.11.7
 
 tests:
