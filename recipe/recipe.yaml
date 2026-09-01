@@ -1,5 +1,5 @@
 context:
-  version: "0.1.4"
+  version: "0.1.5"
 
 package:
   name: genai-prices
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/g/genai-prices/genai_prices-${{ version }}.tar.gz
-    sha256: f3b8a0bf0c21b01f5af3ca42babcab2f17728bf3c602f87f42b72d1d2bf61d98
+    sha256: 04c2cbf4444a3b2f5d38c3b6ab8385ea28ab924ac6f9202bde9261f599be8b45
   - url: https://raw.githubusercontent.com/pydantic/genai-prices/v${{ version }}/LICENSE
     sha256: ab47bf0bbd619cd73e16fd7873c7e0798e7aa62bcc9ae2fc79cbcb9799e609f6
 
@@ -22,14 +22,16 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - uv-build >=0.8.8
+    - hatchling
+    - uv-dynamic-versioning >=0.7.0
     - pip
   run:
     - python >=${{ python_min }}
-    - eval-type-backport >=0.2
-    - httpx >=0.28.1
     - httpx2 >=2.0
-    - pydantic >=2.11.7
+    - pydantic >=2.10
+    - pydantic-settings >=2.11
+    - rich >=14.3.2
+    - rich-argparse >=1.7.2
 
 tests:
   - python:
